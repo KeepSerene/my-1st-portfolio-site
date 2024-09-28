@@ -1,0 +1,64 @@
+/*=============== FOOTER ===============*/
+
+.footer {
+  background-color: var(--clr-black);
+}
+
+.footer__wrapper {
+  padding-block: 3rem 2rem;
+}
+
+.footer__wrapper.grid {
+  row-gap: 2.5rem;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer__link {
+  color: var(--clr-white);
+  transition: color 400ms ease-in-out;
+}
+
+.footer__link:where(:hover, :focus-visible) {
+  color: var(--clr-light-text);
+}
+
+.footer__copyright {
+  color: var(--clr-light-text);
+  font-size: var(--fs-md);
+  text-align: center;
+}
+
+.footer__copyright a {
+  color: var(--clr-white);
+  font-weight: var(--fw-medium);
+}
+
+/*============= DARK THEME ===============*/
+body.dark .footer {
+  background-color: hsl(0, 0%, 4%);
+}
+
+/*=============== RESPONSIVENESS ===============*/
+
+/* For large devices */
+@media screen and (width >= 1150px) {
+  .footer__wrapper {
+    padding-block: 4rem;
+  }
+
+  .footer__wrapper.grid {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+
+  .footer__list {
+    gap: 3rem;
+
+    order: 1;
+  }
+}
