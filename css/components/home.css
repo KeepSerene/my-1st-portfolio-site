@@ -231,9 +231,11 @@ body.dark .home__description b {
     width: 5rem;
 
     left: -8rem;
-    top: 4.5rem;
+    /* top: 4.5rem; */
+    top: 3rem;
 
-    transform: rotate(80deg);
+    /* transform: rotate(80deg); */
+    transform: rotate(150deg);
   }
 
   .home__lines {
