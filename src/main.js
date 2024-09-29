@@ -13,7 +13,6 @@ import "../css/utils.css";
 import handleThemeToggle from "./theme";
 import activateNavLinkOnScroll from "./active-nav-link-on-scroll";
 import sendEmail from "./email-js";
-import "./scrollreveal.min.js";
 
 /*================== THEME =================== */
 handleThemeToggle();
