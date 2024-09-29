@@ -82,7 +82,7 @@ scrollToTopArrowEl.addEventListener("click", () => {
 });
 
 /*=============== SCROLL TO REVEAL ANIMATIONS ===============*/
-// The minified scroll-reveal-animation JS file was linked to the HTML file
+// The CDN is loaded in index.html
 
 const scrollReveal = ScrollReveal({
   origin: "top",
