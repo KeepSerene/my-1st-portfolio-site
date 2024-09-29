@@ -90,7 +90,7 @@
   font-size: 1.25rem;
 }
 
-.btn:where(:hover, :focus) {
+.btn:where(:hover, :focus-visible) {
   background-color: var(--clr-primary);
 }
 

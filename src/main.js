@@ -14,9 +14,10 @@ import handleThemeToggle from "./theme";
 import activateNavLinkOnScroll from "./active-nav-link-on-scroll";
 import sendEmail from "./email-js";
 
+/*================== THEME =================== */
 handleThemeToggle();
 
-/*=============== SHOW MENU ===============*/
+/*=============== SHOW MOBILE MENU ===============*/
 const mobileMenuEl = document.querySelector("[data-mobile-menu]");
 const hamburgerIconEl = document.querySelector("[data-hamburger-icon]");
 const crossIconEl = document.querySelector("[data-cross-icon]");
@@ -41,6 +42,16 @@ mobileNavLinkEls.forEach((linkEl) =>
     mobileMenuEl.classList.remove("show-menu")
   )
 );
+
+/*=============== HEADER SHADOW ===============*/
+const headerEl = document.getElementById("header");
+
+// When we scroll past 50 viewport height, cast a header-shadow
+window.addEventListener("scroll", function () {
+  this.scrollY >= 50
+    ? headerEl.classList.add("header-shadow")
+    : headerEl.classList.remove("header-shadow");
+});
 
 /*================ HIGHLIGHT NAV-LINK ON SCROLL =============*/
 window.addEventListener("scroll", activateNavLinkOnScroll);
