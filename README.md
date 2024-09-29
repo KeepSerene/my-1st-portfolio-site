@@ -6,4 +6,4 @@
 
 ### Note
 
-- One can find the live site [here](/).
+- One can find the live site [here](https://math-to-dev.vercel.app/).

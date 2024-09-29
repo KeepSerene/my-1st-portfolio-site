@@ -83,7 +83,6 @@ scrollToTopArrowEl.addEventListener("click", () => {
 
 /*=============== SCROLL TO REVEAL ANIMATIONS ===============*/
 // The CDN is loaded in index.html
-
 const scrollReveal = ScrollReveal({
   origin: "top",
   distance: "60px",
