@@ -67,6 +67,10 @@
   margin-bottom: 0.75rem;
 }
 
+.projects__description {
+  font-size: 0.875rem;
+}
+
 .projects__action-btns {
   display: flex;
   justify-content: center;

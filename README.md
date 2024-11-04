@@ -1,9 +1,13 @@
 # Portfolio Site of Dhrubajyoti Bhattacharjee
 
+Explore the portfolio showcasing my work in front-end development, featuring projects built with React, Firebase, Zustand, and more!
+
+![Portfolio Homepage](/portfolio-home.png)
+
 ## Author
 
 - Dhrubajyoti Bhattacharjee
 
-### Note
+### Live Demo
 
 - One can find the live site [here](https://math-to-dev.vercel.app/).
