@@ -207,22 +207,6 @@
   gap: 0.75rem;
 }
 
-.contact__socials-link {
-  background-color: var(--clr-light-black);
-  color: var(--clr-white);
-  font-size: 1.25rem;
-  padding: 0.375rem;
-
-  display: grid;
-  place-items: center;
-
-  transition: background-color 300ms ease-in-out;
-}
-
-.contact__socials-link:where(:hover, :focus-visible) {
-  background-color: var(--clr-primary);
-}
-
 .contact__status-msg {
   color: var(--clr-white);
   font-size: var(--fs-md);
