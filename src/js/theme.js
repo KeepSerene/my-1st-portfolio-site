@@ -13,6 +13,9 @@ export default function handleThemeToggle() {
 
   const initialTheme = previousTheme ?? (isSysThemeDark ? "dark" : "light");
 
+  document.documentElement.style.colorScheme =
+    initialTheme === "dark" ? "dark" : "light";
+
   // Load initial theme on mount
   document.body.classList[initialTheme === "dark" ? "add" : "remove"]("dark");
 

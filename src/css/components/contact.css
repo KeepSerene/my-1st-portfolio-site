@@ -169,6 +169,11 @@
   background-color: hsl(14, 98%, 60%);
 }
 
+.contact__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .contact__socials {
   background-color: hsl(0, 0%, 10%);
   text-align: center;

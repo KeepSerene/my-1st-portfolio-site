@@ -4,11 +4,19 @@ const contactFormEl = document.querySelector("[data-contact-form]");
 const contactStatusMsgEl = contactFormEl.querySelector(
   "[data-contact-status-msg]"
 );
+const contactSubmitBtnEl = contactFormEl.querySelector(
+  "[data-contact-submit-btn]"
+);
 
 export default function sendEmail(event) {
   event.preventDefault();
 
-  // serviceID - templateID - form (DOMElement) - publicKey
+  // Disable the submit button
+  contactSubmitBtnEl.disabled = true;
+  contactSubmitBtnEl.innerHTML =
+    '<i class="ri-send-plane-line"></i> Sending Message...';
+
+  // serviceID - templateID - form (DOM-element) - publicKey
   emailjs
     .sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -23,6 +31,11 @@ export default function sendEmail(event) {
       // Remove the confirmation after 5 seconds
       setTimeout(() => (contactStatusMsgEl.innerText = ""), 5000);
 
+      // Re-enable the submit button
+      contactSubmitBtnEl.disabled = false;
+      contactSubmitBtnEl.innerHTML =
+        '<i class="ri-send-plane-line"></i> Send Message';
+
       // Clear the entry fields
       contactFormEl.reset();
     })
@@ -30,6 +43,11 @@ export default function sendEmail(event) {
       // Notify the user if something goes wrong
       contactStatusMsgEl.innerText =
         "Message failed to send (service error!) ❌";
+
+      // Re-enable the submit button
+      contactSubmitBtnEl.disabled = false;
+      contactSubmitBtnEl.innerHTML =
+        '<i class="ri-send-plane-line"></i> Send Message';
 
       console.log(err);
     });

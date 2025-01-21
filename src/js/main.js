@@ -12,6 +12,7 @@ import "../css/utils.css";
 // JS module imports
 import handleThemeToggle from "./theme";
 import activateNavLinkOnScroll from "./active-nav-link-on-scroll";
+import renderProjects from "./projects";
 import sendEmail from "./email-js";
 
 /*================== THEME =================== */
@@ -56,9 +57,12 @@ window.addEventListener("scroll", function () {
 /*================ HIGHLIGHT NAV-LINK ON SCROLL =============*/
 window.addEventListener("scroll", activateNavLinkOnScroll);
 
-// Handle contact form submission
+/*=================== CONTACT FORM ============================*/
 const contactFormEl = document.querySelector("[data-contact-form]");
 contactFormEl.addEventListener("submit", sendEmail);
+
+/*====================== PROJECTS ========================*/
+renderProjects();
 
 /*============= UPDATE FOOTER COPYRIGHT YEAR ===============*/
 const copyrightYearEl = document.querySelector("[data-copyright-year]");
