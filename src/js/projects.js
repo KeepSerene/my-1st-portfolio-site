@@ -45,7 +45,7 @@ const projects = [
     liveLink: "https://block-view-delta.vercel.app/",
     githubLink: "https://github.com/KeepSerene/crypto-screener-react-site",
     description:
-      "Track cryptocurrency prices, trends, and market data in real-time. Features interactive charts, price alerts, customizable watchlists, and detailed market analysis for crypto investors and enthusiasts.",
+      "Track cryptocurrency prices, trends, and market data in real-time. Built using React.js with Vite, Lodash, and Recharts.",
   },
   {
     title: "MarkView Pro",
