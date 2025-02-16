@@ -40,6 +40,14 @@ const projects = [
     description: "Responsive chess game application with React.js and Vite.",
   },
   {
+    title: "BlockView",
+    imageSrc: "/projects/block-view.png",
+    liveLink: "https://block-view-delta.vercel.app/",
+    githubLink: "https://github.com/KeepSerene/crypto-screener-react-site",
+    description:
+      "Track cryptocurrency prices, trends, and market data in real-time. Features interactive charts, price alerts, customizable watchlists, and detailed market analysis for crypto investors and enthusiasts.",
+  },
+  {
     title: "MarkView Pro",
     imageSrc: "/projects/mark-view-pro.png",
     liveLink: "https://mark-view-pro.vercel.app/",
