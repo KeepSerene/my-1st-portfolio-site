@@ -24,6 +24,14 @@ const projects = [
       "Responsive music player with play, pause, shuffle, and repeat features.",
   },
   {
+    title: "SynthVani",
+    imageSrc: "/projects/synth-vani.png",
+    liveLink: "hhttps://synth-vani.vercel.app/",
+    githubLink: "https://github.com/KeepSerene/synth-vani-ai-chat-site",
+    description:
+      "SynthVani is a modern, responsive AI chat application powered by Google's Gemini API.",
+  },
+  {
     title: "BreezeTalk",
     imageSrc: "/projects/breeze-talk-chat-app.png",
     liveLink: "https://breeze-talk-chat-react.web.app/",
