@@ -26,7 +26,7 @@ const projects = [
   {
     title: "SynthVani",
     imageSrc: "/projects/synth-vani.png",
-    liveLink: "hhttps://synth-vani.vercel.app/",
+    liveLink: "https://synth-vani.vercel.app/",
     githubLink: "https://github.com/KeepSerene/synth-vani-ai-chat-site",
     description:
       "SynthVani is a modern, responsive AI chat application powered by Google's Gemini API.",
