@@ -69,7 +69,7 @@
 }
 
 .projects__description {
-  font-size: var(--fs-regular);
+  font-size: var(--fs-md);
   line-height: 1.5;
   user-select: none;
 }
