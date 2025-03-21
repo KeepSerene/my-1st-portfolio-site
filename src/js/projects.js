@@ -32,6 +32,15 @@ const projects = [
       "SynthVani is a modern, responsive AI chat application powered by Google's Gemini API.",
   },
   {
+    title: "ZenKaryaX",
+    imageSrc: "/projects/zen-karya-x.png",
+    liveLink: "https://zen-karya-x.vercel.app/",
+    githubLink:
+      "https://github.com/KeepSerene/zen-karya-ai-task-todo-site/tree/main",
+    description:
+      "Streamline your workflow with AI-powered task management. Create projects, set due dates, and generate task lists automatically.",
+  },
+  {
     title: "BreezeTalk",
     imageSrc: "/projects/breeze-talk-chat-app.png",
     liveLink: "https://breeze-talk-chat-react.web.app/",
