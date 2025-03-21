@@ -102,6 +102,7 @@ body {
   color: var(--clr-text);
   font-family: var(--ff);
   font-size: var(--fs-regular);
+  caret-color: var(--clr-primary);
 
   /* To account for theme toggle */
   transition: background-color 400ms ease-in-out;
@@ -127,7 +128,13 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: hsl(0, 0%, 45%);
 }
 
-/*============= DARK THEME ===============*/
+/*============= SELECTION/HIGHLIGHT ====================*/
+::selection {
+  background-color: var(--clr-primary);
+  color: var(--clr-title);
+}
+
+/*=================== DARK THEME =======================*/
 body.dark::-webkit-scrollbar {
   background-color: hsl(0, 0%, 20%);
 }
