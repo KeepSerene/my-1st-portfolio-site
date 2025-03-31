@@ -6,7 +6,7 @@ const projects = [
     githubLink:
       "https://github.com/KeepSerene/vox-navi-ai-interview-prep-next-app",
     description:
-      "VoxNavi is a modern, responsive web application designed to help job seekers prepare for interviews through AI-powered mock interviews and detailed feedback. ",
+      "Practice interviews with an AI voice assistant. Get personalized feedback and improve your skills.",
   },
   {
     title: "WeatherVue",
