@@ -1,5 +1,14 @@
 const projects = [
   {
+    title: "VoxNavi",
+    imageSrc: "/projects/vox-navi-home.png",
+    liveLink: "https://vox-navi.vercel.app/",
+    githubLink:
+      "https://github.com/KeepSerene/vox-navi-ai-interview-prep-next-app",
+    description:
+      "VoxNavi is a modern, responsive web application designed to help job seekers prepare for interviews through AI-powered mock interviews and detailed feedback. ",
+  },
+  {
     title: "WeatherVue",
     imageSrc: "/projects/weather-vue-app.png",
     liveLink: "https://climate-click.netlify.app/",
