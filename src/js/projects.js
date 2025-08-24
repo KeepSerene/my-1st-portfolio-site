@@ -50,13 +50,13 @@ const projects = [
       "Streamline your workflow with AI-powered task management. Create projects, set due dates, and generate task lists automatically.",
   },
   {
-    title: "BreezeTalk",
-    imageSrc: "/projects/breeze-talk-chat-app.png",
-    liveLink: "https://breeze-talk-chat-react.web.app/",
+    title: "InstantNXT",
+    imageSrc: "/projects/instant-nxt.png",
+    liveLink: "https://instant-nxt.vercel.app/",
     githubLink:
-      "https://github.com/KeepSerene/breeze-talk-react-firebase-chat-app",
+      "https://github.com/KeepSerene/instant-nxt-real-time-chat-app-next15",
     description:
-      "Real-time desktop chat application with React, Firebase, and Zustand.",
+      "Real-time chat application with NextJS, Convex database, and Shancn/UI.",
   },
   {
     title: "ReactMate",
