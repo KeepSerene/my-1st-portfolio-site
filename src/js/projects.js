@@ -56,7 +56,7 @@ const projects = [
     githubLink:
       "https://github.com/KeepSerene/instant-nxt-real-time-chat-app-next15",
     description:
-      "Real-time chat application with NextJS, Convex database, and Shancn/UI.",
+      "Real-time chat application with NextJS, Convex database, Clerk Google Auth, and Shancn/UI.",
   },
   {
     title: "ReactMate",
