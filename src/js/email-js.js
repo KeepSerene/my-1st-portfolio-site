@@ -1,5 +1,7 @@
 /*=============== EmailJS: https://dashboard.emailjs.com/ ===============*/
 
+import { validateForm, displayErrors, clearErrors } from "./form-validation.js";
+
 const contactFormEl = document.querySelector("[data-contact-form]");
 const contactStatusMsgEl = contactFormEl.querySelector(
   "[data-contact-status-msg]"
@@ -10,8 +12,27 @@ const contactSubmitBtnEl = contactFormEl.querySelector(
 
 export default function sendEmail(event) {
   event.preventDefault();
+  clearErrors(); // clear any previous errors or status msgs
+  contactStatusMsgEl.innerText = "";
+  const formData = new FormData(contactFormEl);
+  const data = Object.fromEntries(formData);
+  const validation = validateForm(data);
 
-  // Disable the submit button
+  if (!validation.isValid) {
+    displayErrors(validation.errors);
+    contactStatusMsgEl.innerText = "Please fix the errors above";
+    contactStatusMsgEl.style.color = "var(--clr-error)";
+    setTimeout(() => {
+      contactStatusMsgEl.innerText = "";
+    }, 5000);
+
+    return;
+  }
+
+  // clear any existing errors
+  clearErrors();
+
+  // disable the submit button
   contactSubmitBtnEl.disabled = true;
   contactSubmitBtnEl.innerHTML =
     '<i class="ri-send-plane-line"></i> Sending Message...';
@@ -25,26 +46,23 @@ export default function sendEmail(event) {
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then(() => {
-      // Show message sent confirmation
+      // onfirmation
       contactStatusMsgEl.innerText = "Message successfully sent ✅";
-
-      // Remove the confirmation after 5 seconds
+      contactStatusMsgEl.style.color = "#10b981";
       setTimeout(() => (contactStatusMsgEl.innerText = ""), 5000);
-
-      // Re-enable the submit button
+      // re-enable the submit button
       contactSubmitBtnEl.disabled = false;
       contactSubmitBtnEl.innerHTML =
         '<i class="ri-send-plane-line"></i> Send Message';
-
-      // Clear the entry fields
+      // clear the entry fields
       contactFormEl.reset();
     })
     .catch((err) => {
-      // Notify the user if something goes wrong
+      // notify the user if something goes wrong
       contactStatusMsgEl.innerText =
         "Message failed to send (service error!) ❌";
-
-      // Re-enable the submit button
+      contactStatusMsgEl.style.color = "var(--clr-error)";
+      // re-enable the submit button
       contactSubmitBtnEl.disabled = false;
       contactSubmitBtnEl.innerHTML =
         '<i class="ri-send-plane-line"></i> Send Message';

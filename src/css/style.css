@@ -11,6 +11,7 @@
   --clr-light-text: hsl(0, 0%, 64%);
   --clr-bg: hsl(0, 0%, 87%);
   --clr-wrapper: hsl(0, 0%, 83%);
+  --clr-error: hsl(359, 55%, 55%);
 
   /*========== Font and typography ==========*/
   --ff: "Bai Jamjuree", sans-serif;
@@ -149,7 +150,7 @@ body.dark::-webkit-scrollbar-thumb:hover {
 
 /*=============== SCROLL TO TOP FLOATING BUTTON ===============*/
 .scroll-to-top-arrow {
-  display: inline-flex;
+  display: inline-flex !important;
   background-color: var(--clr-black);
   color: var(--clr-white);
   font-size: 1.25rem;
