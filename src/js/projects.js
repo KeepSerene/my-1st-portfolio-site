@@ -9,12 +9,12 @@ const projects = [
       "Practice interviews with an AI voice assistant. Get personalized feedback and improve your skills.",
   },
   {
-    title: "WeatherVue",
-    imageSrc: "/projects/weather-vue-app.png",
-    liveLink: "https://climate-click.netlify.app/",
-    githubLink: "https://github.com/KeepSerene/WeatherVue_App",
+    title: "Wardosphere",
+    imageSrc: "/projects/wardosphere.png",
+    liveLink: "https://wardosphere.vercel.app/",
+    githubLink: "https://github.com/KeepSerene/Weatherio-weather-web-app",
     description:
-      "Responsive weather application using HTML, CSS, JavaScript, OpenWeatherMap API.",
+      "An advanced weather web application providing accurate forecasts and air quality data for locations worldwide.",
   },
   {
     title: "NoteKeeper (CRUD)",
