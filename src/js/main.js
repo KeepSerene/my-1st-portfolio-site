@@ -14,6 +14,11 @@ import handleThemeToggle from "./theme";
 import activateNavLinkOnScroll from "./active-nav-link-on-scroll";
 import renderProjects from "./projects";
 import sendEmail from "./email-js";
+import {
+  displayFieldError,
+  hasFieldError,
+  validateField,
+} from "./form-validation";
 
 /*================== THEME =================== */
 handleThemeToggle();
@@ -60,6 +65,23 @@ window.addEventListener("scroll", activateNavLinkOnScroll);
 /*=================== CONTACT FORM ============================*/
 const contactFormEl = document.querySelector("[data-contact-form]");
 contactFormEl.addEventListener("submit", sendEmail);
+
+// real-time validation on blur for form fields
+const formFields = contactFormEl.querySelectorAll(".contact__entry-field");
+
+formFields.forEach((field) => {
+  field.addEventListener("blur", () => {
+    const fieldName = field.getAttribute("name");
+    const fieldValue = field.value;
+
+    // only validate on blur if the field previously had an error
+    // should prevent showing errors before user has tried to submit the form
+    if (hasFieldError(fieldName)) {
+      const error = validateField(fieldName, fieldValue);
+      displayFieldError(fieldName, error);
+    }
+  });
+});
 
 /*====================== PROJECTS ========================*/
 renderProjects();

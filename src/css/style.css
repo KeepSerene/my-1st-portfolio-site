@@ -11,6 +11,7 @@
   --clr-light-text: hsl(0, 0%, 64%);
   --clr-bg: hsl(0, 0%, 87%);
   --clr-wrapper: hsl(0, 0%, 83%);
+  --clr-success: hsl(142, 76%, 36%);
   --clr-error: hsl(359, 55%, 55%);
 
   /*========== Font and typography ==========*/
