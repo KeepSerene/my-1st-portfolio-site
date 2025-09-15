@@ -6,6 +6,8 @@ export function validateForm(formData) {
     errors.user_name = "Full name is required";
   } else if (formData.user_name.trim().length < 2) {
     errors.user_name = "Name must be at least 2 characters";
+  } else if (formData.user_name.trim().length > 50) {
+    errors.user_name = "Name cannot exceed 50 characters";
   }
 
   // email validation
@@ -21,6 +23,8 @@ export function validateForm(formData) {
     errors.user_message_subject = "Subject is required";
   } else if (formData.user_message_subject.trim().length < 3) {
     errors.user_message_subject = "Subject must be at least 3 characters";
+  } else if (formData.user_message_subject.trim().length > 100) {
+    errors.user_message_subject = "Subject cannot exceed 100 characters";
   }
 
   // message validation
@@ -28,6 +32,8 @@ export function validateForm(formData) {
     errors.user_message = "Message is required";
   } else if (formData.user_message.trim().length < 10) {
     errors.user_message = "Message must be at least 10 characters";
+  } else if (formData.user_message.trim().length > 500) {
+    errors.user_message = "Message cannot exceed 500 characters";
   }
 
   return {
@@ -45,6 +51,8 @@ export function validateField(fieldName, fieldValue) {
         error = "Full name is required";
       } else if (fieldValue.trim().length < 2) {
         error = "Name must be at least 2 characters";
+      } else if (fieldValue.trim().length > 50) {
+        error = "Name cannot exceed 50 characters";
       }
       break;
 
@@ -62,6 +70,8 @@ export function validateField(fieldName, fieldValue) {
         error = "Subject is required";
       } else if (fieldValue.trim().length < 3) {
         error = "Subject must be at least 3 characters";
+      } else if (fieldValue.trim().length > 100) {
+        error = "Subject cannot exceed 100 characters";
       }
       break;
 
@@ -70,6 +80,8 @@ export function validateField(fieldName, fieldValue) {
         error = "Message is required";
       } else if (fieldValue.trim().length < 10) {
         error = "Message must be at least 10 characters";
+      } else if (fieldValue.trim().length > 500) {
+        error = "Message cannot exceed 500 characters";
       }
       break;
   }
