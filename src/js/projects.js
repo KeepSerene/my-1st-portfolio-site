@@ -9,6 +9,14 @@ const projects = [
       "Practice interviews with an AI voice assistant. Get personalized feedback and improve your skills.",
   },
   {
+    title: "RaagRiff",
+    imageSrc: "/projects/raag-riff.png",
+    liveLink: "https://raag-riff.onrender.com",
+    githubLink: "https://github.com/KeepSerene/raag-riff-spotify-clone",
+    description:
+      "A modern, feature-rich Spotify web player for discovering music, exploring albums, artists, and playlists. Browse new releases, search tracks, and stream seamlessly with Spotify Premium. Built with the Spotify Web API and Web Playback SDK.",
+  },
+  {
     title: "Wardosphere",
     imageSrc: "/projects/wardosphere.png",
     liveLink: "https://wardosphere.vercel.app/",
