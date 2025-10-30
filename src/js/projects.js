@@ -14,7 +14,7 @@ const projects = [
     liveLink: "https://raag-riff.onrender.com",
     githubLink: "https://github.com/KeepSerene/raag-riff-spotify-clone",
     description:
-      "A modern, feature-rich Spotify web player for discovering music, exploring albums, artists, and playlists. Browse new releases, search tracks, and stream seamlessly with Spotify Premium. Built with the Spotify Web API and Web Playback SDK.",
+      "A sleek Spotify web player to explore and stream music, albums, artists, and playlists — powered by the Spotify Web API and Playback SDK.",
   },
   {
     title: "Wardosphere",
