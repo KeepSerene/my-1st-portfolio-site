@@ -17,30 +17,6 @@ const projects = [
       "A sleek Spotify web player to explore and stream music, albums, artists, and playlists — powered by the Spotify Web API and Playback SDK.",
   },
   {
-    title: "Wardosphere",
-    imageSrc: "/projects/wardosphere.png",
-    liveLink: "https://wardosphere.vercel.app/",
-    githubLink: "https://github.com/KeepSerene/Weatherio-weather-web-app",
-    description:
-      "An advanced weather web application providing accurate forecasts and air quality data for locations worldwide.",
-  },
-  {
-    title: "NoteKeeper (CRUD)",
-    imageSrc: "/projects/note-keeper-app.png",
-    liveLink: "https://note-sphere.netlify.app/",
-    githubLink: "https://github.com/KeepSerene/CRUD-NoteKeeper-JS",
-    description:
-      "Responsive note-keeping app with CRUD operations and localStorage.",
-  },
-  {
-    title: "Cadence",
-    imageSrc: "/projects/cadence-app.png",
-    liveLink: "https://cadence-theta.vercel.app/",
-    githubLink: "https://github.com/KeepSerene/music-player-js",
-    description:
-      "Responsive music player with play, pause, shuffle, and repeat features.",
-  },
-  {
     title: "SynthVani",
     imageSrc: "/projects/synth-vani.png",
     liveLink: "https://synth-vani.vercel.app/",
@@ -65,6 +41,30 @@ const projects = [
       "https://github.com/KeepSerene/instant-nxt-real-time-chat-app-next15",
     description:
       "Real-time chat application with NextJS, Convex database, Clerk Google Auth, and Shancn/UI.",
+  },
+  {
+    title: "Wardosphere",
+    imageSrc: "/projects/wardosphere.png",
+    liveLink: "https://wardosphere.vercel.app/",
+    githubLink: "https://github.com/KeepSerene/Weatherio-weather-web-app",
+    description:
+      "An advanced weather web application providing accurate forecasts and air quality data for locations worldwide.",
+  },
+  {
+    title: "NoteKeeper (CRUD)",
+    imageSrc: "/projects/note-keeper-app.png",
+    liveLink: "https://note-sphere.netlify.app/",
+    githubLink: "https://github.com/KeepSerene/CRUD-NoteKeeper-JS",
+    description:
+      "Responsive note-keeping app with CRUD operations and localStorage.",
+  },
+  {
+    title: "Cadence",
+    imageSrc: "/projects/cadence-app.png",
+    liveLink: "https://cadence-theta.vercel.app/",
+    githubLink: "https://github.com/KeepSerene/music-player-js",
+    description:
+      "Responsive music player with play, pause, shuffle, and repeat features.",
   },
   {
     title: "ReactMate",
