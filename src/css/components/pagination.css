@@ -1,0 +1,158 @@
+/*=============== PAGINATION ===============*/
+
+.pagination {
+  border-top: 2px solid var(--clr-bg);
+  padding-top: 2rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Info text */
+.pagination__info {
+  order: 2;
+  color: var(--clr-text);
+  font-size: var(--fs-md);
+}
+
+.pagination__info-highlight {
+  color: var(--clr-title);
+  font-weight: var(--fw-semi-bold);
+}
+
+/* Controls wrapper */
+.pagination__controls {
+  order: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Pagination buttons */
+.pagination__btn {
+  background-color: transparent;
+  color: var(--clr-black);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 400ms ease-in-out;
+}
+
+.pagination__btn i {
+  font-size: 1.625rem;
+}
+
+.pagination__btn:where(:hover, :focus-visible):not(:disabled) {
+  color: var(--clr-primary);
+}
+
+.pagination__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Page input group */
+.pagination__page-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination__label,
+.pagination__total {
+  color: var(--clr-text);
+  font-size: var(--fs-md);
+}
+
+.pagination__input {
+  width: 3.5rem;
+  background-color: var(--clr-white);
+  color: var(--clr-title);
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-medium);
+  text-align: center;
+  border: 1px solid var(--clr-light-black);
+  padding: 0.3rem;
+  outline: none;
+  transition: border-color 400ms ease-in-out;
+}
+
+.pagination__input:focus {
+  border-color: var(--clr-primary);
+}
+
+/* Remove spinner buttons in number input */
+.pagination__input::-webkit-inner-spin-button,
+.pagination__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pagination__input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/*============= DARK THEME ===============*/
+body.dark .pagination {
+  border-top-color: var(--clr-wrapper);
+}
+
+body.dark .pagination__btn {
+  color: var(--clr-white);
+}
+
+body.dark .pagination__btn:where(:hover, :focus-visible):not(:disabled) {
+  color: var(--clr-primary);
+}
+
+body.dark .pagination__input {
+  background-color: var(--clr-wrapper);
+  border-color: var(--clr-light-black);
+}
+
+body.dark .pagination__input:focus {
+  border-color: var(--clr-primary);
+}
+
+/*=============== RESPONSIVENESS ===============*/
+
+/* For medium devices */
+@media screen and (width >= 576px) {
+  .pagination {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .pagination__info {
+    order: 1;
+  }
+
+  .pagination__controls {
+    order: 2;
+  }
+}
+
+/* For large devices */
+@media screen and (width >= 1150px) {
+  .pagination {
+    padding-top: 3rem;
+    margin-top: 4rem;
+  }
+
+  .pagination__btn i {
+    font-size: 1.25rem;
+  }
+
+  .pagination__input {
+    width: 4rem;
+  }
+}

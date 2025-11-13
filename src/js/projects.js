@@ -1,3 +1,5 @@
+import Pagination from "./pagination";
+
 const projects = [
   {
     title: "VoxNavi",
@@ -138,66 +140,113 @@ const projects = [
   },
 ];
 
+// Pagination state
+let currentPage = 1;
+const itemsPerPage = 9;
+let paginationInstance = null;
+
 export default function renderProjects() {
-  const generateProjectsHTML = (projects) => {
-    const projectsWrapperEl = document.querySelector("[data-projects-wrapper]");
+  const projectsWrapperEl = document.querySelector("[data-projects-wrapper]");
 
-    projects.forEach((project, index) => {
-      const projectHTMLStr = `
-              <section class="projects__card">
-                  <div class="projects__img-wrapper">
-                    <img
-                      src="${project.imageSrc}"
-                      alt="Project ${index + 1}"
-                      loading="lazy"
-                      class="projects__img"
-                    />
-      
-                    ${
-                      project.liveLink
-                        ? `<a
-                      href="${project.liveLink}"
-                      target="_blank"
-                      class="projects__btn btn"
-                      title="Visit site"
-                    >
-                      <i
-                        class="ri-arrow-right-up-line"
-                        aria-label="Click to visit the live site"
-                      ></i>
-                    </a>`
-                        : ""
-                    }
-                  </div>
-      
-                  <div class="projects__content">
-                    <h3 class="projects__subtitle">${
-                      project.liveLink ? "Website" : "Python App"
-                    }</h3>
-      
-                    <h2 class="projects__title">${project.title}</h2>
-      
-                    <p class="projects__description">
-                      ${project.description}
-                    </p>
-                  </div>
-      
-                  <div class="projects__action-btns">
-                    <a
-                      href=${project.githubLink}
-                      target="_blank"
-                      class="projects__link"
-                    >
-                      <i class="ri-github-line" aria-label="Click to view code"></i>
-                      View Code
-                    </a>
-                  </div>
-                </section>
-              `;
+  // create pagination container if it doesn't exist
+  let paginationContainer = document.querySelector(
+    "[data-pagination-container]"
+  );
 
-      projectsWrapperEl.insertAdjacentHTML("beforeend", projectHTMLStr);
-    });
-  };
+  if (!paginationContainer) {
+    paginationContainer = document.createElement("div");
+    paginationContainer.setAttribute("data-pagination-container", "");
+    projectsWrapperEl.parentNode.appendChild(paginationContainer);
+  }
 
-  generateProjectsHTML(projects);
+  // initial render
+  renderProjectsPage(currentPage);
+
+  // initialize pagination
+  paginationInstance = new Pagination({
+    currentPage,
+    totalItems: projects.length,
+    itemsPerPage,
+    container: paginationContainer,
+    onPageChange: (page) => {
+      currentPage = page;
+      renderProjectsPage(page);
+
+      // smooth scroll to projects section
+      const projectsSection = document.getElementById("projects");
+
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    },
+  });
+}
+
+function renderProjectsPage(page) {
+  const projectsWrapperEl = document.querySelector("[data-projects-wrapper]");
+
+  // clear existing projects
+  projectsWrapperEl.innerHTML = "";
+
+  // calculate pagination indices
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const projectsToShow = projects.slice(startIndex, endIndex);
+
+  // generate and append projects
+  projectsToShow.forEach((project, index) => {
+    const projectHTMLStr = `
+      <section class="projects__card">
+        <div class="projects__img-wrapper">
+          <img
+            src="${project.imageSrc}"
+            alt="Project ${startIndex + index + 1}"
+            loading="lazy"
+            class="projects__img"
+          />
+
+          ${
+            project.liveLink
+              ? `<a
+            href="${project.liveLink}"
+            target="_blank"
+            class="projects__btn btn"
+            title="Visit site"
+          >
+            <i
+              class="ri-arrow-right-up-line"
+              aria-label="Click to visit the live site"
+            ></i>
+          </a>`
+              : ""
+          }
+        </div>
+
+        <div class="projects__content">
+          <h3 class="projects__subtitle">${
+            project.liveLink ? "Website" : "Python App"
+          }</h3>
+
+          <h2 class="projects__title">${project.title}</h2>
+
+          <p class="projects__description">
+            ${project.description}
+          </p>
+        </div>
+
+        <div class="projects__action-btns">
+          <a
+            href=${project.githubLink}
+            target="_blank"
+            class="projects__link"
+          >
+            <i class="ri-github-line" aria-label="Click to view code"></i>
+            View Code
+          </a>
+        </div>
+      </section>
+    `;
+
+    projectsWrapperEl.insertAdjacentHTML("beforeend", projectHTMLStr);
+  });
 }
