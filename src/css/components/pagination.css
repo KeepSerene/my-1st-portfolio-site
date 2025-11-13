@@ -83,7 +83,7 @@
   border: 1px solid var(--clr-light-black);
   padding: 0.3rem;
   outline: none;
-  transition: border-color 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .pagination__input:focus {
