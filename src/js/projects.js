@@ -28,10 +28,18 @@ const projects = [
     title: "ZenKaryaX",
     imageSrc: "/projects/zen-karya-x.png",
     liveLink: "https://zen-karya-x.vercel.app/",
-    githubLink:
-      "https://github.com/KeepSerene/zen-karya-ai-task-todo-site/tree/main",
+    githubLink: "https://github.com/KeepSerene/zen-karya-ai-task-todo-site",
     description:
       "Streamline your workflow with AI-powered task management. Create projects, set due dates, and generate task lists automatically.",
+  },
+  {
+    title: "Moduo",
+    imageSrc: "/projects/moduo.png",
+    liveLink: "https://moduo.onrender.com/",
+    githubLink:
+      "https://github.com/KeepSerene/moduo-video-calling-interview-platform-mern",
+    description:
+      "Real-time collaborative coding interview platform. Practice, conduct, and experience technical interviews like never before.",
   },
   {
     title: "InstantNXT",
