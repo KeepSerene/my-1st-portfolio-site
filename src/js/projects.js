@@ -152,6 +152,7 @@ const projects = [
 // Pagination state
 let currentPage = 1;
 const itemsPerPage = 9;
+let paginationInstance = null;
 
 export default function renderProjects() {
   const projectsWrapperEl = document.querySelector("[data-projects-wrapper]");
