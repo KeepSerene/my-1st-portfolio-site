@@ -44,6 +44,15 @@ const projects = [
       "Real-time collaborative coding interview platform. Practice, conduct, and experience technical interviews like never before.",
   },
   {
+    title: "Imprintly",
+    imageSrc: "/projects/imprintly.png",
+    liveLink: "https://imprintly.onrender.com/",
+    githubLink:
+      "https://github.com/KeepSerene/imprintly-ai-e-book-creator-mern",
+    description:
+      "Write, design, and export professional eBooks in minutes. Your personal publishing assistant powered by AI.",
+  },
+  {
     title: "InstantNXT",
     imageSrc: "/projects/instant-nxt.png",
     liveLink: "https://instant-nxt.vercel.app/",
@@ -143,7 +152,6 @@ const projects = [
 // Pagination state
 let currentPage = 1;
 const itemsPerPage = 9;
-let paginationInstance = null;
 
 export default function renderProjects() {
   const projectsWrapperEl = document.querySelector("[data-projects-wrapper]");
